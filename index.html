@@ -1,1 +1,125 @@
-Initial commit
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jeroen Visser</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                margin: 0px;
+                background-color: #00b70c;
+            }
+
+            /* Style the header */
+            header {
+                background-color:deepskyblue;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+                min-height: 80%;
+            }
+
+            article {
+                width: 100%;
+                padding-top: 200px;
+                font-size: 50px;
+                text-align:center;
+                background-color:deepskyblue;
+                vertical-align: middle;
+                background-image:url(grass.png);
+                background-size: contain;
+                background-repeat: repeat-x;
+                background-position: bottom;
+                min-height: 20%;
+            }
+
+            /* Clear floats after the columns */
+            section:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Style the footer */
+            footer {
+                padding: 10px;
+                padding-top: 100px;
+                text-align: center;
+                color: white;
+            }
+
+            /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+            @media (max-width: 600px) {
+                article {
+                    width: 100%;
+                }
+            }
+            input[type=text], select, textarea {
+                width: 80%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+            }
+
+            input[type=submit] {
+                background-color: white;
+                color: #00b70c;
+                font-weight: bold;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            .container {
+                border-radius: 5px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+<body>
+    <header>
+        <img src="me.png" width="10%">
+        <h1>Jeroen Visser</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </header>
+    <section>
+        <article>
+            <a href="#contact"><img src="logo_mail.png" width="5%"></a>
+            <a href="#"><img src="logo_twitter.png" width="5%"></a>
+            <a href="#"><img src="logo_github.png" width="5%"></a>
+            <a href="#"><img src="logo_linkedin.png" width="5%"></a>
+        </article>
+    </section>
+    <footer>
+        <div id="contact" class="container">
+        <form action="/action_page.php">
+            <input type="text" id="name" name="name" placeholder="Name...">
+            <input type="text" id="email" name="email" placeholder="Email...">
+            <input type="text" id="subject" name="subject" placeholder="Subject...">
+            <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+            <br>
+            <input type="submit" value="Send">
+        </form>
+        </div>
+    </footer>
+</body>
+</html>
