@@ -10,7 +10,7 @@ $(function () {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var name = $("input#name").val();
-            var _replyto = $("input#_replyto").val();
+            var email = $("input#email").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
@@ -24,7 +24,7 @@ $(function () {
                 type: "POST",
                 data: {
                     name: name,
-                    _replyto: _replyto,
+                    _replyto: email,
                     message: message,
                 },
                 cache: false,
