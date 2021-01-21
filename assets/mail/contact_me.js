@@ -10,7 +10,7 @@ $(function () {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var name = $("input#name").val();
-            var email = $("input#email").val();
+            var email = $("input#_replyto").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
@@ -20,11 +20,11 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "/assets/mail/contact_me.php",
+                url: "https://formspree.io/f/xdopbzkn",
                 type: "POST",
                 data: {
                     name: name,
-                    email: email,
+                    _replyto: _replyto,
                     message: message,
                 },
                 cache: false,
